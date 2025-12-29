@@ -2,125 +2,153 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>InsideBinaryLab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>InsideBinary — Reverse Engineering & Protocol Analysis</title>
+
+  <!-- SEO -->
+  <meta name="description" content="InsideBinary focuses on reverse engineering, JavaScript signature analysis, and protocol research. Independent research, tooling demos, and educational content." />
+  <meta name="keywords" content="reverse engineering, protocol analysis, javascript reversing, binary analysis, security research" />
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <meta name="description" content="InsideBinaryLab — Reverse Engineering & Client Behavior Research" />
 </head>
 
-<body class="bg-neutral-950 text-neutral-200 antialiased">
+<body class="bg-neutral-950 text-neutral-100 antialiased">
+
+  <!-- Header -->
+  <header class="border-b border-neutral-800">
+    <div class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+      <div class="text-xl font-semibold tracking-tight">
+        InsideBinary
+      </div>
+      <nav class="space-x-6 text-sm text-neutral-400">
+        <a href="#research" class="hover:text-white">Research</a>
+        <a href="#projects" class="hover:text-white">Projects</a>
+        <a href="#community" class="hover:text-white">Community</a>
+      </nav>
+    </div>
+  </header>
 
   <!-- Hero -->
-  <section class="max-w-5xl mx-auto px-6 py-24">
-    <h1 class="text-4xl md:text-5xl font-semibold tracking-tight">
-      InsideBinaryLab
+  <section class="max-w-6xl mx-auto px-6 py-24">
+    <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+      Reverse Engineering<br/>
+      & Protocol Analysis Lab
     </h1>
-    <p class="mt-6 text-xl text-neutral-400 max-w-2xl">
-      Reverse Engineering & Client Behavior Research.<br />
-      Focused on real-world JavaScript reversing, protocol analysis,
-      and client-side protection mechanisms.
+
+    <p class="mt-6 max-w-2xl text-neutral-400 text-lg">
+      InsideBinary is an independent research initiative focused on
+      JavaScript signature reversing, protocol analysis, and binary-level understanding
+      of modern applications.
     </p>
 
-    <div class="mt-8 flex gap-4">
+    <div class="mt-10 flex flex-wrap gap-4">
       <a href="https://github.com/insidebinarylab"
-         class="px-5 py-2 rounded-md bg-neutral-800 hover:bg-neutral-700 transition">
-        GitHub
+         class="px-5 py-2.5 rounded-md bg-white text-black text-sm font-medium hover:bg-neutral-200">
+        View GitHub
       </a>
-      <a href="mailto:contact@insidebinary.com"
-         class="px-5 py-2 rounded-md border border-neutral-700 hover:border-neutral-500 transition">
-        Contact
+
+      <a href="#community"
+         class="px-5 py-2.5 rounded-md border border-neutral-700 text-sm hover:border-neutral-400">
+        Join Community
       </a>
     </div>
   </section>
 
-  <!-- What We Do -->
-  <section class="max-w-5xl mx-auto px-6 py-16 border-t border-neutral-800">
-    <h2 class="text-2xl font-medium">What We Do</h2>
+  <!-- Research -->
+  <section id="research" class="border-t border-neutral-800">
+    <div class="max-w-6xl mx-auto px-6 py-20">
+      <h2 class="text-2xl font-semibold">Research Focus</h2>
 
-    <div class="mt-8 grid md:grid-cols-3 gap-6">
-      <div class="p-6 rounded-lg bg-neutral-900 border border-neutral-800">
-        <h3 class="font-medium">JavaScript Reversing</h3>
-        <p class="mt-3 text-sm text-neutral-400">
-          Analysis of obfuscated JavaScript logic, signature generation,
-          and execution flow reconstruction.
-        </p>
-      </div>
+      <div class="mt-10 grid md:grid-cols-3 gap-8 text-neutral-300 text-sm">
+        <div>
+          <h3 class="text-white font-medium mb-2">JavaScript Signature Analysis</h3>
+          <p>
+            Reverse engineering client-side signature logic, obfuscation layers,
+            and anti-bot mechanisms used in modern web applications.
+          </p>
+        </div>
 
-      <div class="p-6 rounded-lg bg-neutral-900 border border-neutral-800">
-        <h3 class="font-medium">Protocol Analysis</h3>
-        <p class="mt-3 text-sm text-neutral-400">
-          Understanding request structures, parameter semantics,
-          and client-server interaction patterns.
-        </p>
-      </div>
+        <div>
+          <h3 class="text-white font-medium mb-2">Protocol & Traffic Analysis</h3>
+          <p>
+            Understanding private APIs, request signing schemes, encryption layers,
+            and communication patterns.
+          </p>
+        </div>
 
-      <div class="p-6 rounded-lg bg-neutral-900 border border-neutral-800">
-        <h3 class="font-medium">Client Behavior Research</h3>
-        <p class="mt-3 text-sm text-neutral-400">
-          Studying behavior binding, anti-automation strategies,
-          and practical protection design.
-        </p>
+        <div>
+          <h3 class="text-white font-medium mb-2">Binary-Level Understanding</h3>
+          <p>
+            From native libraries to runtime behavior, focusing on how real-world
+            software enforces logic beyond documentation.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Featured Research -->
-  <section class="max-w-5xl mx-auto px-6 py-16 border-t border-neutral-800">
-    <h2 class="text-2xl font-medium">Featured Research</h2>
+  <!-- Projects -->
+  <section id="projects" class="border-t border-neutral-800">
+    <div class="max-w-6xl mx-auto px-6 py-20">
+      <h2 class="text-2xl font-semibold">Selected Projects</h2>
 
-    <div class="mt-8 p-6 rounded-lg bg-neutral-900 border border-neutral-800">
-      <h3 class="font-medium">
-        JavaScript Signature Reversing Demo
-      </h3>
-      <p class="mt-3 text-sm text-neutral-400 max-w-2xl">
-        A real-world case study demonstrating the methodology of analyzing
-        JavaScript-based API signature mechanisms from a black-box perspective.
-      </p>
-
-      <a href="https://github.com/insidebinarylab/js-signature-reversing-demo"
-         class="inline-block mt-4 text-sm text-neutral-300 hover:text-white underline">
-        View on GitHub →
-      </a>
+      <div class="mt-8 space-y-4 text-neutral-400 text-sm max-w-3xl">
+        <p>
+          • <span class="text-white">js-signature-reversing-demo</span> — A documented case
+          study demonstrating JavaScript signature analysis techniques.
+        </p>
+        <p>
+          • <span class="text-white">protocol-analysis-notes</span> — Methodologies and
+          tooling notes for traffic and API reversing.
+        </p>
+        <p>
+          • More research demos and educational material will be published progressively.
+        </p>
+      </div>
     </div>
   </section>
 
   <!-- Community -->
-  <section class="max-w-5xl mx-auto px-6 py-16 border-t border-neutral-800">
-    <h2 class="text-2xl font-medium">Community & Updates</h2>
+  <section id="community" class="border-t border-neutral-800">
+    <div class="max-w-6xl mx-auto px-6 py-20">
+      <h2 class="text-2xl font-semibold">Community & Updates</h2>
 
-    <p class="mt-4 text-neutral-400 max-w-2xl">
-      Research notes, updates, and future course announcements
-      will be shared through the following channels.
-    </p>
+      <p class="mt-6 max-w-2xl text-neutral-400 text-sm">
+        Follow ongoing research updates, release notes, and discussions through
+        the channels below.
+      </p>
 
-    <div class="mt-6 flex flex-wrap gap-4">
-      <a href="https://twitter.com/insidebinary"
-         class="px-5 py-2 rounded-md bg-neutral-800 hover:bg-neutral-700 transition">
-        Twitter / X
-      </a>
-      <a href="https://discord.gg/your-invite"
-         class="px-5 py-2 rounded-md bg-neutral-800 hover:bg-neutral-700 transition">
-        Discord
-      </a>
-      <a href="mailto:contact@insidebinary.com"
-         class="px-5 py-2 rounded-md border border-neutral-700 hover:border-neutral-500 transition">
-        Email
-      </a>
+      <div class="mt-8 flex flex-wrap gap-6 text-sm">
+        <a href="https://x.com/ib_insidebinary"
+           target="_blank"
+           class="hover:text-white">
+          X (Twitter) → @ib_insidebinary
+        </a>
+
+        <a href="https://discord.gg/U4gCkQYd"
+           class="hover:text-white">
+          Discord → InsideBinary
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="max-w-5xl mx-auto px-6 py-12 border-t border-neutral-800 text-sm text-neutral-500">
-    <p>
-      © InsideBinaryLab · Research & Educational Purposes Only
-    </p>
-    <p class="mt-2">
-      Not affiliated with any platform or service provider.
-    </p>
+  <footer class="border-t border-neutral-800">
+    <div class="max-w-6xl mx-auto px-6 py-10 text-neutral-500 text-xs flex justify-between flex-wrap gap-4">
+      <div>
+        © <span id="year"></span> InsideBinary. Independent research initiative.
+      </div>
+      <div>
+        <a href="https://github.com/insidebinarylab" class="hover:text-white">GitHub</a>
+      </div>
+    </div>
   </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
