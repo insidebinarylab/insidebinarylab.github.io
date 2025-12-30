@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>InsideBinary — Reverse Engineering & Protocol Analysis</title>
 
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="shortcut icon" href="assets/favicon.ico">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+
   <!-- SEO -->
   <meta name="description" content="InsideBinary focuses on reverse engineering, JavaScript signature analysis, and protocol research. Independent research, tooling demos, and educational content." />
   <meta name="keywords" content="reverse engineering, protocol analysis, javascript reversing, binary analysis, security research" />
@@ -19,16 +25,33 @@
 <body class="bg-neutral-950 text-neutral-100 antialiased">
 
   <!-- Header -->
-  <header class="border-b border-neutral-800">
+  <header class="border-b  border-neutral-800">
     <div class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
-      <div class="text-xl font-semibold tracking-tight">
-        InsideBinary
+      <div class="flex items-center space-x-1">
+        <img src="assets/logo/logo-1024.png" alt="InsideBinary Logo" class="size-8">
+        <h3 class="text-xl font-semibold tracking-tight h-8">InsideBinary</h3>
       </div>
-      <nav class="space-x-6 text-sm text-neutral-400">
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-6 text-sm text-neutral-400">
         <a href="#research" class="hover:text-white">Research</a>
         <a href="#projects" class="hover:text-white">Projects</a>
         <a href="#community" class="hover:text-white">Community</a>
       </nav>
+
+      <!-- Mobile Hamburger -->
+      <div class="md:hidden">
+        <button id="menu-toggle" class="focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-neutral-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-neutral-800 bg-neutral-950">
+      <a href="#research" class="block px-6 py-3 text-sm text-neutral-400 hover:text-white">Research</a>
+      <a href="#projects" class="block px-6 py-3 text-sm text-neutral-400 hover:text-white">Projects</a>
+      <a href="#community" class="block px-6 py-3 text-sm text-neutral-400 hover:text-white">Community</a>
     </div>
   </header>
 
@@ -158,6 +181,13 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+    // Mobile menu toggle
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
   </script>
 
 </body>
